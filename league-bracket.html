@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <style type="text/css">
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            min-width: 175px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
+        .flex-column .spacer {
+            flex-grow: 0.5;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            //background: rgba(255, 0, 0, 0.2);
+        }
+
+        .flex-column  .stx {
+            flex-grow: 0.5;
+            position: relative;
+            border-right: 1px solid green;
+        }
+
+        .flex-column .stx:first-of-type {
+            border-top: 1px solid green;
+        }
+        .flex-column .stx:last-of-type {
+            border-bottom: 1px solid green;
+        }
+
+        .flex-column .stx:only-of-type {
+            flex-grow: 0;
+            border-bottom: 0;
+        }
+
+
+        .flex-column.has-second .stx {
+            border-right: 0 !important;
+        }
+        
+        .stx:last-of-type .match{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: translate(0%, 50%)
+        }
+        .stx:first-of-type .match {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: initial;
+            transform: translate(0%, -50%);
+        }
+
+        .team-block {
+            position: relative;
+            margin: 0px 15px;
+            border: 1px solid rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.1);
+            padding: 3px 5px;
+        }
+
+        .team-block.from-upper:before {
+            position: absolute;
+            content: '';
+            border: 1px solid blue;
+            border-top: 0;
+            border-right: 0;
+            top: 0;
+            left: 0;
+            transform: translate(-100%);
+            height: calc(50%);
+            width: 10px;
+            box-sizing: inherit;
+        }
+
+
+        .h150 {
+            height: 150px;
+        }
+
+        .flex-column.before-finals-upper .spacer:last-child {
+            border-right: 1px solid red;
+        }
+
+        .flex-column.before-finals-lower .spacer:first-child {
+            border-right: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex-row">
+
+    <div class="flex-column">
+        <div class="flex-row h150">
+            <div class="flex-column">
+                <hr class="spacer" />
+                <div class="stx">
+                    <div class="match">
+                        <div class="team-block">team 1</div>
+                        <div class="team-block">team 2</div>
+                    </div>
+                </div>
+                <div class="stx">
+                    <div class="match">
+                        <div class="team-block">team 1</div>
+                        <div class="team-block">team 2</div>
+                    </div>
+                </div>
+                <hr class="spacer" />
+            </div>
+        </div>
+        <div class="flex-row h150">
+            <div class="flex-column">
+                <hr class="spacer" />
+                <div class="stx">
+                    <div class="match">
+                        <div class="team-block">team 1</div>
+                        <div class="team-block">team 2</div>
+                    </div>
+                </div>
+                <div class="stx">
+                    <div class="match">
+                        <div class="team-block">team 1</div>
+                        <div class="team-block">team 2</div>
+                    </div>
+                </div>
+                <hr class="spacer" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex-column">
+        <div class="flex-row h150">
+            <div class="flex-column">
+                <hr class="spacer" />
+                <div class="stx">
+                    <div class="match">
+                        <div class="team-block">team 1</div>
+                        <div class="team-block">team 2</div>
+                    </div>
+                </div>
+                <div class="stx">
+                    <div class="match">
+                        <div class="team-block">team 1</div>
+                        <div class="team-block">team 2</div>
+                    </div>
+                </div>
+                <hr class="spacer" />
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-column ">
+        <div class="flex-row h150">
+            <div class="flex-column">
+                <hr class="spacer" />
+                <div class="stx">
+                    <div class="match">
+                        <div class="team-block">team 1</div>
+                        <div class="team-block">team 2</div>
+                    </div>
+                </div>
+                <hr class="spacer" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex-row">
+    <div class="flex-column">
+
+        <div class="flex-row">
+
+            <div class="flex-column has-second">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                        </li>
+                        <li class="stx">
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                        </li>
+                        <li class="stx">
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="flex-column">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex-column has-second">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                        </li>
+                        <li class="stx">
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="flex-column">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="flex-column has-second">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="flex-column before-finals-upper">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flex-row">
+
+            <div class="flex-column has-second">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="flex-column">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block from-upper">team 1</div>
+                                <div class="team-block ">team 2</div>
+                            </div>
+                        </li>
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block from-upper">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block from-upper">team 1</div>
+                                <div class="team-block ">team 2</div>
+                            </div>
+                        </li>
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block from-upper">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex-column has-second">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="flex-column">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block from-upper">team 1</div>
+                                <div class="team-block ">team 2</div>
+                            </div>
+                        </li>
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block from-upper">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="flex-column has-second">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex-column before-finals-lower">
+                <div class="flex-row h150">
+                    <ul class="flex-column">
+                        <hr class="spacer" />
+                        <li class="stx">
+                            <div class="match">
+                                <div class="team-block from-upper">team 1</div>
+                                <div class="team-block">team 2</div>
+                            </div>
+                        </li>
+                        <hr class="spacer" />
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Finals -->
+
+    <div class="flex-column">
+        <div class="flex-row h150">
+            <ul class="flex-column">
+                <hr class="spacer" />
+                <li class="stx">
+                    <div class="match">
+                        <div class="team-block">team 1</div>
+                        <div class="team-block">team 2</div>
+                    </div>
+                </li>
+                <hr class="spacer" />
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
